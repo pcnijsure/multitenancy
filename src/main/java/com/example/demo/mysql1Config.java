@@ -40,12 +40,12 @@ public class mysql1Config {
 	public LocalContainerEntityManagerFactoryBean mysql1LCEMFB(@Qualifier("mysql1DS") DataSource mysql1DS)
 	{
 		LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
-	    entityManagerFactoryBean.setDataSource(mysql1DS);
-	    entityManagerFactoryBean.setPackagesToScan("com.example.demo.mysql1");
-	    HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-	    vendorAdapter.setDatabasePlatform("org.hibernate.dialect.MySQL5Dialect");
-	    entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);
-	    return entityManagerFactoryBean;
+		entityManagerFactoryBean.setDataSource(mysql1DS);
+		entityManagerFactoryBean.setPackagesToScan("com.example.demo.mysql1");
+		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+		vendorAdapter.setDatabasePlatform("org.hibernate.dialect.MySQL5Dialect");
+		entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);
+		return entityManagerFactoryBean;
 	}
 	
 	@Bean
